@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\shop",
+    "\\shop\\carts",
+    "\\shop\\customers",
+    "\\shop\\products",
+    "\\shop\\static",
+    "\\shop\\templates",
+    "\\shop\\templates\\admin",
+    "\\shop\\templates\\customer",
+    "\\shop\\templates\\products"
+  ],
+  "SelectedNode": "\\shop\\customers\\model.py",
+  "PreviewInSolutionExplorer": false
+}

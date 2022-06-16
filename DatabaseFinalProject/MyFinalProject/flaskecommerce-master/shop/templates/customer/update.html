@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="text-center bg-info p-2 h4">Account Info</div>
+                {% from "_formhelpers.html" import render_field %}
+                {% include '_messages.html' %}
+                <p>Name: {{current_user.name}}</p>
+                <p>Type: {{current_user.type}}</p>
+                <p>Email: {{current_user.email}}</p>
+                <p>Phone: {{current_user.phone}}</p>
+                <hr>
+                <form method=post>
+                    {{form.csrf_token}}
+                <div>
+                    {{ render_field(form.name, class="form-control") }}
+                    {{ render_field(form.phone, class="form-control") }}
+                </div>
+                <p><input type="submit" value="Update" class="float-left btn btn-info">
+                 <a href="{{url_for('home')}}" class="float-right btn btn-danger">Back</a>
+                </form>
+                
+            </div>
+      <div class="col-md-3"></div>
+    </div>
+</div>
+{% endblock content %}
